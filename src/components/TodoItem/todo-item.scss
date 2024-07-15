@@ -1,0 +1,89 @@
+$background-color-light: #fff7ea;
+$text-color-light: #212529;
+
+$background-color-dark: #212529;
+$text-color-dark: #fff7ea;
+
+.todo-item {
+  width: 800px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  position: relative;
+
+  border-radius: 10px;
+  border: 1px solid #fff;
+
+  background: rgba($text-color-light, $alpha: 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 650px;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $text-color-light;
+  }
+  &__description {
+    padding: 5px 0 5px 0;
+  }
+  &__controllers {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__checked {
+    display: flex;
+    align-items: center;
+    input {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $text-color-light;
+      cursor: pointer;
+    }
+  }
+
+  &__edit {
+  }
+  &__btn {
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .todo-item {
+    width: 600px;
+    &__text {
+      max-width: 450px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .todo-item {
+    width: 400px;
+    &__main {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+    &__controllers {
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .todo-item {
+    width: 350px;
+  }
+}

@@ -1,0 +1,25 @@
+$background-color-light: #fff7ea;
+$text-color-light: #212529;
+
+$background-color-dark: #212529;
+$text-color-dark: #fff7ea;
+
+.custom-btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $text-color-light;
+  background: $background-color-light;
+
+  padding: 0px 30px;
+  height: 35px;
+
+  border-radius: 10px;
+  border: 1px solid $text-color-light;
+  transition: all 0.3s;
+}
+
+.custom-btn:hover {
+  background: $background-color-dark;
+  color: $text-color-dark;
+}

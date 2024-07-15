@@ -1,0 +1,83 @@
+$background-color-light: #fff7ea;
+$text-color-light: #212529;
+
+$background-color-dark: #212529;
+$text-color-dark: #fff7ea;
+
+.edit-sector {
+  margin-bottom: 10px;
+  margin-top: 15px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-color-light;
+    margin-bottom: 10px;
+  }
+  &__change-area {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__input {
+    input {
+      width: 200px;
+      padding: 5px 10px;
+
+      background: $background-color-light;
+      border: 1px solid $text-color-light;
+      border-radius: 10px;
+    }
+  }
+  &__text-area {
+    textarea {
+      max-width: 200px;
+      padding: 5px 10px;
+
+      background: $background-color-light;
+      border: 1px solid $text-color-light;
+      border-radius: 10px;
+    }
+  }
+  &__label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $text-color-light;
+  }
+  &__btn {
+    button {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      color: $text-color-light;
+      background: $background-color-light;
+
+      padding: 0px 30px;
+      height: 35px;
+
+      border-radius: 10px;
+      border: 1px solid $text-color-light;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.edit-sector__btn button:hover {
+  background: $background-color-dark;
+  color: $text-color-dark;
+}
+
+@media (max-width: 650px) {
+  .edit-sector {
+    &__change-area {
+      display: flex;
+      flex-direction: column;
+    }
+    &__input {
+      margin-bottom: 15px;
+    }
+    &__text-area {
+      margin-bottom: 15px;
+    }
+  }
+}
